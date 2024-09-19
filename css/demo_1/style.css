@@ -1,0 +1,440 @@
+
+
+iframe {
+  vertical-align:middle;
+}
+
+.pic{
+  display: flex;
+  align-items: stretch;
+}
+
+.inline-block-child {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pic img {
+  opacity: 1;
+  max-width: 60%;
+  transition: opacity 0.4s ease-in-out;
+  /* 过渡效果 */
+}
+
+.card {
+  max-width: 1200px;
+}
+
+/* 左侧标题下方横线 、数据分析、对比*/
+.nav .nav-item,
+.navbar-nav .nav-item {
+  line-height: 1.5;
+}
+
+/* 导航栏 */
+.navbar.default-layout {
+  font-family: "roboto", sans-serif;
+  background: #fff;
+  font-weight: bold;
+  transition: background 0.25s ease;
+  -webkit-transition: background 0.25s ease;
+  -moz-transition: background 0.25s ease;
+  -ms-transition: background 0.25s ease;
+}
+
+/* 导航栏logo区域 */
+.navbar.default-layout .navbar-brand-wrapper {
+  transition: width 0.25s ease, background 0.25s ease;
+  -webkit-transition: width 0.25s ease, background 0.25s ease;
+  -moz-transition: width 0.25s ease, background 0.25s ease;
+  -ms-transition: width 0.25s ease, background 0.25s ease;
+  background: #1c45ef;
+  width: 270px;
+  height: 63px;
+  line-height: 63px;
+}
+
+/* 导航栏logo */
+.navbar.default-layout .navbar-brand-wrapper .navbar-brand {
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 63px;
+  margin-right: 0;
+  padding: 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* 导航栏logo-图片 */
+.navbar.default-layout .navbar-brand-wrapper .navbar-brand img {
+  width: 30px;
+  margin: 10px;
+  vertical-align: middle;
+}
+
+
+/* 导航栏右侧 */
+.navbar.default-layout .navbar-menu-wrapper .navbar-nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* 导航栏右侧-文字 */
+.navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item {
+  margin-left: 1rem;
+}
+
+/* Sidebar */
+.sidebar {
+  min-height: calc(100vh - 63px);
+  background: -webkit-gradient(linear, left bottom, left top, from(#5768f3), to(#1c45ef));
+  background: linear-gradient(to top, #5768f3, #1c45ef);
+  font-family: "roboto", sans-serif;
+  padding: 0;
+  width: 270px;
+  z-index: 11;
+  transition: width 0.25s ease, background 0.25s ease;
+  -webkit-transition: width 0.25s ease, background 0.25s ease;
+  -moz-transition: width 0.25s ease, background 0.25s ease;
+  -ms-transition: width 0.25s ease, background 0.25s ease;
+}
+
+.sidebar>.nav {
+  overflow: hidden;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+/* 左侧边栏滚动条 */
+.sidebar>.nav .nav-item:not(.hover-open) .collapse .sub-menu .nav-item .nav-link,
+.sidebar>.nav .nav-item:not(.hover-open) .collapsing .sub-menu .nav-item .nav-link {
+  padding: 10px 0px 10px 70px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: calc(15px - 2px);
+  font-weight: 500;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: "ease-in-out";
+  transition-timing-function: "ease-in-out";
+  -webkit-transition-property: "background", "color", "box-shadow", "padding", "box-shadow";
+  transition-property: "background", "color", "box-shadow", "padding", "box-shadow";
+  transition-property: "background", "color", "box-shadow", "padding";
+}
+
+.sidebar>.nav .nav-item:not(.hover-open) .collapse .sub-menu .nav-item .nav-link:before,
+.sidebar>.nav .nav-item:not(.hover-open) .collapsing .sub-menu .nav-item .nav-link:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 35px;
+  display: block;
+  height: 100%;
+  width: 2px;
+  background: #1026de;
+}
+
+.sidebar>.nav .nav-item:not(.hover-open) .collapse .sub-menu .nav-item .nav-link:hover,
+.sidebar>.nav .nav-item:not(.hover-open) .collapsing .sub-menu .nav-item .nav-link:hover {
+  color: #fff;
+}
+
+.sidebar>.nav .nav-item:not(.hover-open) .collapse .sub-menu .nav-item .nav-link:hover:before,
+.sidebar>.nav .nav-item:not(.hover-open) .collapsing .sub-menu .nav-item .nav-link:hover:before {
+  background: #fff;
+}
+
+.sidebar>.nav .nav-item:not(.hover-open) .collapse .sub-menu .nav-item:first-child .nav-link,
+.sidebar>.nav .nav-item:not(.hover-open) .collapsing .sub-menu .nav-item:first-child .nav-link {
+  padding-top: 0;
+}
+
+.sidebar>.nav .nav-item:not(.hover-open) .collapse .sub-menu .nav-item:last-child .nav-link,
+.sidebar>.nav .nav-item:not(.hover-open) .collapsing .sub-menu .nav-item:last-child .nav-link {
+  padding-bottom: 0;
+}
+
+/* 左侧边栏细分类 */
+.sidebar>.nav .nav-item .nav-link {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 30px 15px 55px;
+  white-space: nowrap;
+  color: #fff;
+}
+
+/* 边栏图标 */
+.sidebar>.nav .nav-item .nav-link i.menu-arrow {
+  margin-left: auto;
+  margin-right: 0;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+.sidebar>.nav .nav-item .nav-link i.menu-arrow:before {
+  content: "\F054";
+  font-family: "Material Design Icons";
+  font-size: 18px;
+  line-height: 1;
+  font-style: normal;
+  vertical-align: middle;
+  color: #bfccda;
+}
+
+.sidebar>.nav .nav-item .nav-link[aria-expanded="true"] i.menu-arrow {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.sidebar>.nav .nav-item .nav-link .menu-icon {
+  display: none;
+  margin-right: 1.25rem;
+  width: 16px;
+  line-height: 1;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* 边栏大分类 */
+.sidebar>.nav .nav-item .nav-link .menu-title {
+  color: inherit;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  vertical-align: middle;
+  font-weight: 530;
+}
+
+.sidebar>.nav .nav-item .nav-link:hover {
+  color: #f2f2f2;
+}
+
+.sidebar>.nav .nav-item.active>.nav-link {
+  color: #fff;
+}
+
+.sidebar>.nav .nav-item.active>.nav-link .menu-title,
+.sidebar>.nav .nav-item.active>.nav-link i {
+  color: inherit;
+}
+
+/* 边栏上横线 */
+.sidebar>.nav .nav-item.nav-category {
+  color: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+  margin: 0 30px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 0px 15px 0px;
+}
+
+.sidebar>.nav>.nav-item>.nav-link {
+  height: 52px;
+}
+
+.sidebar>.nav>.nav-item:not(.nav-profile)>.nav-link {
+  position: relative;
+}
+
+.sidebar>.nav>.nav-item:not(.nav-profile)>.nav-link:before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  right: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  display: block;
+}
+
+.sidebar>.nav:not(.sub-menu)>.nav-item>.nav-link {
+  background: transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: "ease-in-out";
+  transition-timing-function: "ease-in-out";
+  -webkit-transition-property: "background", "color", "box-shadow", "padding", "box-shadow";
+  transition-property: "background", "color", "box-shadow", "padding", "box-shadow";
+  transition-property: "background", "color", "box-shadow", "padding";
+}
+
+.sidebar>.nav:not(.sub-menu)>.nav-item:hover:not(.nav-profile):not(.hover-open)>.nav-link:not([aria-expanded="true"]) {
+  background: #0f25d5;
+  padding-left: 65px;
+}
+
+.sidebar>.nav:not(.sub-menu)>.nav-item:hover:not(.nav-profile):not(.hover-open)>.nav-link:not([aria-expanded="true"]):before {
+  border-color: #fff;
+}
+
+.sidebar>.nav:not(.sub-menu)>.nav-item:hover:not(.nav-profile):not(.hover-open)>.nav-link:not([aria-expanded="true"]) .menu-title {
+  color: #fff;
+}
+
+.sidebar>.nav:not(.sub-menu)>.nav-item:hover:not(.nav-profile):not(.hover-open)>.nav-link:not([aria-expanded="true"]) .menu-arrow:before {
+  color: #bfccda;
+}
+
+/* 响应式布局 */
+@media screen and (max-width: 900px) {
+  /* 边栏 */
+  .sidebar-offcanvas {
+    position: absolute;
+    width: 50px;
+    max-height: calc(100vh - 63px);
+    bottom: 0;
+    overflow: auto;
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+
+  .main-panel {
+    width: calc (100%-50px) !important;
+    margin-left: 50px;
+  }
+
+  .navbar.default-layout {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .collapse show {
+    display: none;
+  }
+
+  .navbar.default-layout .navbar-brand-wrapper {
+    width: 50px;
+  }
+
+  .footer {
+    width: 100%;
+  }
+}
+
+/* Footer */
+.footer {
+  background: #dbdbdb;
+  padding: 0;
+  transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  border-top: 1px solid #cdd6dc;
+  font-size: calc(0.875rem - 0.05rem);
+  font-family: "roboto", sans-serif;
+  height: 40px;
+  line-height: 40px;
+}
+
+.text-muted{
+  line-height: 40px;
+}
+.navbar.fixed-top+.page-body-wrapper {
+  padding-top: 63px;
+}
+
+.purchase-banner-active .navbar.fixed-top {
+  top: 55px;
+}
+
+.purchase-banner-active .navbar.fixed-top+.page-body-wrapper {
+  padding-top: calc(63px + 55px);
+}
+
+.card {
+  -webkit-box-shadow: 0 0 0 0 rgba(90, 113, 208, 0.11), 0 4px 16px 0 rgba(167, 175, 183, 0.33);
+  box-shadow: 0 0 0 0 rgba(90, 113, 208, 0.11), 0 4px 16px 0 rgba(167, 175, 183, 0.33);
+  border: solid 1px #dde4eb;
+  border-radius: 10px;
+}
+
+.page-body-wrapper {
+  /* 设置最小高度为视口高度的100%减去63px，这通常是为了给固定在顶部的元素（如导航栏）留出空间 */  
+  min-height: calc(100vh - 63px);  
+  /* 启用Flexbox布局，这是一种CSS布局模式，提供了一种更有效的方式来布局、对齐和分配容器中项目的空间，即使它们的大小未知或是动态变化的 */  
+  display: -webkit-box; 
+  display: -ms-flexbox; 
+  display: flex; /* 标准的Flexbox布局 */  
+  /* 设置Flex容器的方向为水平（行）方向 */  
+  -webkit-box-orient: horizontal; 
+  -webkit-box-direction: normal;  
+  -ms-flex-direction: row; 
+  flex-direction: row; /* 标准的Flexbox语法，表示主轴的方向为水平 */  
+  padding-left: 0;  
+  padding-right: 0;  
+}
+
+.page-body-wrapper.full-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main-panel {
+  /* 为宽度和外边距设置过渡效果，持续时间为0.25秒，缓动函数为ease */  
+  -webkit-transition: width 0.25s ease, margin 0.25s ease; /* 兼容旧版WebKit浏览器 */  
+  transition: width 0.25s ease, margin 0.25s ease; /* 标准CSS过渡效果 */  
+  /* 设置宽度为父元素宽度的100%减去270px，以留出空间给侧边栏等元素 */  
+  width: calc(100% - 270px);  
+  /* 设置最小高度为视口高度的100%减去63px，以留出空间给固定在顶部的元素（如导航栏） */  
+  min-height: calc(100vh - 63px);  
+  /* 启用Flexbox布局模式，使.main-panel成为一个Flex容器 */  
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  
+  /* 设置Flex容器的方向为垂直方向（即从上到下） */  
+  -webkit-box-orient: vertical; 
+  -webkit-box-direction: normal; 
+  -ms-flex-direction: column; 
+  flex-direction: column; /* 标准的Flexbox语法，设置主轴方向为垂直 */
+}
+
+.content-wrapper {  
+  background: #F3F3F3;  
+  /* 设置内边距（padding）为上下各1.5rem，左右各1.7rem。这里的rem单位相对于根元素（html）的字体大小，是一种相对单位，有助于在不同屏幕尺寸下保持一致的布局比例 */  
+  padding: 1.5rem 1.7rem;  
+  width: 100%;   
+  -webkit-box-flex: 1;  
+  -ms-flex-positive: 1;  
+  /* flex-grow: 1; 是Flexbox的标准属性，用于指定Flex项目的增长因子。值1表示如果容器有多余空间，.content-wrapper将等比例地伸展以填充这些空间。如果没有设置flex-grow，或者设置为0，则元素不会伸展来占据额外空间 */  
+  flex-grow: 1;  
+}
+
+.container-scroller {
+  overflow: hidden;
+}
+
+/*#dashboard-vmap {
+  height: 161px;
+  width: 100%;
+}
+
+#dashboard-vmap .jvectormap-zoomin,
+#dashboard-vmap .jvectormap-zoomout {
+  display: none;
+} */
+
+/*# sourceMappingURL=style.css.map */
